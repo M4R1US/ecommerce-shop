@@ -10,6 +10,9 @@ const Header = ({ currentUser }) => (
   <Link className="logo-container" to="/">
     <Logo className="logo"/>
   </Link>
+   {
+     currentUser ? <h2 className="welcome-text">Hello {currentUser.displayName}</h2> : ""
+   }
    <div className="options">
       <Link className="option" to="/shop">SHOP</Link>
       <Link className="option" to="/contact">CONTACT</Link>
