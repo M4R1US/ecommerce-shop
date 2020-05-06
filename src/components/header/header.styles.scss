@@ -8,17 +8,18 @@
   .logo-container {
     height: 100%;
     width: 70px;
-    padding: 25px;
+    padding-top: 20px;
+    padding-left: 5px;
   }
 
   .welcome-text {
-    font-size: 30px;
-    padding: 0 0 0 50px;
+    font-size: 28px;
+    padding: 0 0 0 15px;
     width: 50%;
     height: 100%;
     display: flex;
-    align-items: baseline;
     justify-content: flex-start;
+    margin-bottom:20px;
   }
 
   .options {
