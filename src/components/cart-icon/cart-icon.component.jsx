@@ -4,15 +4,22 @@ import { connect } from "react-redux"
 import "./cart-icon.styles.scss"
 import { toggleCart } from "../../redux/cart/cart.actions.js"
 
-const CartIcon = ( {toggleCart} ) => (
+const CartIcon = ( {toggleCart, itemCount} ) => (
  <div className="cart-icon" onClick={toggleCart} >
    <ShoppingIcon className="shopping-icon" />
-   <span className="item-count"> 0 </span>
+   <span className="item-count"> {itemCount} </span>
  </div>
 );
 
-const mapDispatchToProps = (dispatch) => ({
-  toggleCart: () => dispatch(toggleCart())
+const mapStateToProps = ({cart: { cartItems }}) => ({
+  itemCount: cartItems.reduce((accumulated, cItem) => {
+    return accumulated + cItem.quantity
+  }
+  ,0)
 })
 
-export default connect(null, mapDispatchToProps)(CartIcon);
+const mapDispatchToProps = (dispatch) => ({
+  toggleCart: () => dispatch(toggleCart())
+});
+
+export default connect(mapStateToProps, mapDispatchToProps)(CartIcon);
