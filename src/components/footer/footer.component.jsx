@@ -5,7 +5,7 @@ import "./footer.styles.scss"
 
 const Footer = () => (
  <div className="footer-container">
-   <span className="information">www.test.com</span>
+   <span className="information">www.fictive.store</span>
    <div className="information">
      <a href="https://www.github.com/M4R1US">
        <Logo/>

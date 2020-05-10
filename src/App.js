@@ -6,6 +6,7 @@ import HomePage from "./pages/homepage/homepage.component";
 import ShopPage from "./pages/shop/shop.component";
 import Header from "./components/header/header.component";
 import CheckoutPage from "./pages/checkout/checkout.component";
+import Notification from "./components/notification/notification.component";
 
 import SignInSignUpPage from "./pages/sign-in-and-sign-up/sing-in-sign-up.component";
 import { auth, createUserProfileDocument } from "./firebase/firebase.utils";
@@ -41,8 +42,10 @@ class App extends React.Component{
   }
 
   render() {
+    const message = "This website is still under development and some functionality is not supported yet, keep that in mind while browsing.";
     return (
       <div>
+        <Notification message={message}/>
         <Header/>
         <Switch>
           <Route exact path="/" component={HomePage}/>
