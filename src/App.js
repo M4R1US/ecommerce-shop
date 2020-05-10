@@ -7,6 +7,7 @@ import ShopPage from "./pages/shop/shop.component";
 import Header from "./components/header/header.component";
 import CheckoutPage from "./pages/checkout/checkout.component";
 import Notification from "./components/notification/notification.component";
+import EmptyPage from "./pages/empty-page/empty-page";
 
 import SignInSignUpPage from "./pages/sign-in-and-sign-up/sing-in-sign-up.component";
 import { auth, createUserProfileDocument } from "./firebase/firebase.utils";
@@ -52,6 +53,7 @@ class App extends React.Component{
           <Route exact path="/shop" component={ShopPage}/>
           <Route exact path="/signin" render= {() => this.props.currentUser ? (<Redirect to="/" />) : (<SignInSignUpPage />)} />
           <Route exact path="/checkout" component={CheckoutPage} />
+          <Route exact path="/contact" component={EmptyPage} />
         </Switch>
         <Footer/>
       </div>
