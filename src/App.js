@@ -8,11 +8,11 @@ import Header from "./components/header/header.component";
 import CheckoutPage from "./pages/checkout/checkout.component";
 import Notification from "./components/notification/notification.component";
 import EmptyPage from "./pages/empty-page/empty-page";
-
 import SignInSignUpPage from "./pages/sign-in-and-sign-up/sing-in-sign-up.component";
+import Footer from "./components/footer/footer.component"
+
 import { auth, createUserProfileDocument } from "./firebase/firebase.utils";
 import { setCurrentUser } from "./redux/user/user.actions";
-import Footer from "./components/footer/footer.component"
 import { selectCurrentUser } from "./redux/user/user.selectors"
 import { createStructuredSelector } from "reselect";
 
